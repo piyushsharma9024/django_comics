@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Responsive Navbar with Searchbox</title> --> 
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+<li class="logo"><a href="{% url 'pcomics:home' %}">BESTCOMIX4KIDS</a></li>
+
+<form method="get" action="/search/" method="get">
+    <li class="search-icon">
+        <input type="search" name="q" placeholder="Search">               
+        <label class="icon">
+            <span><button class="fas fa-search" type="submit"></button><span>
+        </label>
+   </li>
+</form>
+
+</ul>
+</nav>
+<script>
+      $('nav ul li.btn span').click(function(){
+        $('nav ul div.items').toggleClass("show");
+        $('nav ul li.btn span').toggleClass("show");
+      });
+    </script>
+  </body>
+</html>
+<div class="heading">
+    <h2>BESTCOMIX4KIDS.com</h2>
+</div>
+
+

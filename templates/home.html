@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%  load static %}
+{% block link %}
+ <link href="{% static 'css/main.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="comics-page"><a href="{% url 'pcomics:comics' %}"><img class="icon" src="media/icon.png">GO TO COMICS PAGE</a></div>
+  <h1 class="title-1">Latest and Updated Comics</h1>
+    <hr class="hr">
+    {% for post in posts %}
+    <ul>
+      <li>
+      <a href="{% url 'pcomics:detail' post.slug %}"><img class="image" src="{{post.main_image.url}}"></a>
+       <div class="title">{{post.title|capfirst}}</div>
+      </li>
+    </ul>
+    {% endfor %}
+{% endblock %}

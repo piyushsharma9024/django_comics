@@ -1,0 +1,16 @@
+{% comment %} <!-- Footer -->
+<footer class="page-footer font-small blue">
+  
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+  
+  {% for tags in common_tags %}
+    <div class="card-body">
+        <a href="{% url 'pcomics:tags' tags.slug %}"><p class="card-text">{{tags}}</p></a>
+    </div>
+  {%endfor%}
+</footer>
+<!-- Footer --> {% endcomment %}

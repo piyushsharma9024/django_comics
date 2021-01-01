@@ -1,0 +1,42 @@
+.gallary{
+    margin: 10px 50px; 
+}
+.gallary img{
+    width: 260px;
+    padding: 5px;
+    filter: grayscale(100%);
+}
+.gallary img:hover{
+    filter: grayscale(0) ;
+    transform: scale(1.1);
+}
+.tags{
+    background: rgb(37, 37, 37);
+    float: left;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.tags:hover{
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+.rel{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.rel a{
+    text-decoration: none;
+}
+.rel a p{
+    margin-bottom: 4px;
+}
+
+.t{
+    margin-left: 50px;
+}
